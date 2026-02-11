@@ -11,9 +11,9 @@ def is_enabled(value, default):
 
 
 # PyroClient Setup 
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ['39134569'])
+API_HASH = environ['4e901df1ec6ca3f0717777b65a4b72c3']
+BOT_TOKEN = environ['8383833294:AAEdCjXSjtij_nXKkv9XT90t6vjQEvZHunQ']
 
 # Bot settings
 WEB_SUPPORT = bool(environ.get("WEBHOOK", 'True')) # for web support on/off
@@ -32,10 +32,10 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-FILE_DB_URL = environ.get("FILE_DB_URL", DATABASE_URL)
-FILE_DB_NAME = environ.get("FILE_DB_NAME", DATABASE_NAME)
+DATABASE_URL = environ.get('mongodb+srv://movesvtm_db:8792234103@123@movesvtm.zfyuchu.mongodb.net/?appName=movesvtm', "")
+DATABASE_NAME = environ.get('movesvtm_db', "Cluster0")
+FILE_DB_URL = environ.get("mongodb+srv://movesvtm_db:8792234103@123@movesvtm.zfyuchu.mongodb.net/?appName=movesvtm", DATABASE_URL)
+FILE_DB_NAME = environ.get("movesvtm_db", DATABASE_NAME)
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Filters Configuration 
